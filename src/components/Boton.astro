@@ -1,0 +1,13 @@
+---
+interface Props {
+  title?: string;
+  url?: string;
+}
+const { title = "Default Title", url = "#" } = Astro.props;
+---
+
+<a
+  href={url}
+  class="px-4 py-2 rounded inline-flex text-black bg-[#ffa851] drop-shadow-xl hover:bg-[#ff8831] hover:border-spacing-1"
+  >{title}</a
+>

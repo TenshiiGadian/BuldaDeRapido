@@ -1,0 +1,63 @@
+<header
+  id="landing-header"
+  class="py-3 px-10 items-center absolute top-0 w-full flex justify-between z-40"
+>
+  <div class="flex flex-grow basis-0">
+    <span class="px-4 py-2 font-bold text-lg cursor-pointer">Bulda</span>
+  </div>
+  <nav>
+    <ul
+      class="flex [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+    >
+      <li><a href="#">About</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Ubication</a></li>
+      <li><a href="#">Allies</a></li>
+    </ul>
+  </nav>
+  <nav class="flex flex-grow justify-end basis-0">
+    <ul
+      class="flex justify-between [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+    >
+      <li><a href="/signIn">SignIn</a></li>
+      <li><a href="/signUp">SignUp</a></li>
+    </ul>
+  </nav>
+
+  <div
+    id="menu-backdrop"
+    class={`
+    absolute bg-black/5 backdrop-blur-lg rounded
+    translate-x-[var(--left)] translate-y-[var(--top)]
+    left-0 top-0
+    w-[var(--width)] h-[var(--height)]
+    transition-all duration-500
+    ease-in-out opacity-0 -z-10
+  `}
+  >
+  </div>
+</header>
+
+<script>
+  const listItem = document.querySelectorAll("#landing-header li");
+  const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect();
+
+      menuBackDrop.style.setProperty("--left", `${left}px`);
+      menuBackDrop.style.setProperty("--top", `${top}px`);
+      menuBackDrop.style.setProperty("--width", `${width}px`);
+      menuBackDrop.style.setProperty("--height", `${height}px`);
+
+      menuBackDrop.style.opacity = "1";
+      menuBackDrop.style.visibility = "visible";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0";
+      menuBackDrop.style.visibility = "hidden";
+    });
+  });
+</script>
