@@ -1,9 +1,18 @@
 ---
 import Layout from "../Layouts/Layout.astro";
+import HeaderPage from "../components/HeaderPage.astro";
 ---
 
 <Layout>
-  <header></header>
+  <HeaderPage />
   <main></main>
   <footer></footer>
 </Layout>
+<style is:global>
+  @font-face {
+    font-family: "UbuntuCondensed";
+    src: url("/fonts/UbuntuCondensed.ttf");
+    font-weight: normal;
+    font-display: swap;
+  }
+</style>

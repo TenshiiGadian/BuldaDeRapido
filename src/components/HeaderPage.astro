@@ -1,9 +1,13 @@
+---
+const s = Astro.url.pathname;
+---
+
 <header
   id="landing-header"
   class="py-3 px-10 items-center absolute top-0 w-full flex justify-between z-40"
 >
   <div class="flex flex-grow basis-0">
-    <span class="px-4 py-2 font-bold text-lg cursor-pointer">Bulda</span>
+    <a href="/" class="px-4 py-2 font-bold text-lg cursor-pointer">Bulda</a>
   </div>
   <nav>
     <ul
@@ -19,8 +23,24 @@
     <ul
       class="flex justify-between [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
     >
-      <li><a href="/signIn">SignIn</a></li>
-      <li><a href="/signUp">SignUp</a></li>
+      {
+        s != "/signIn" ? (
+          <li>
+            <a href="/signIn">SignIn</a>
+          </li>
+        ) : (
+          <li />
+        )
+      }
+      {
+        s != "/signUp" ? (
+          <li>
+            <a href="/signUp">SignUp</a>
+          </li>
+        ) : (
+          <li />
+        )
+      }
     </ul>
   </nav>
 

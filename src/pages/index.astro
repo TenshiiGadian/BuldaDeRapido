@@ -7,22 +7,32 @@ import Header from "../components/HeaderPage.astro";
 <Layout>
   <Header />
   <main class="[&>section]:px-[10%]">
-    <section class="h-screen flex justify-between items-center">
-      <div class="w-[50%] flex flex-col gap-5">
-        <h2 class="text-4xl font-bold">Bulda e' Rapida</h2>
-        <p class="w-11/12">
-          "¡El rápido y confiable servicio de delivery que estabas esperando ha
-          llegado a Carabobo! Bulda e' Rapido es tu aliado para entregas rápidas
-          y seguras, al estilo de Amazon. ¡Descubre una nueva forma de disfrutar
-          de tus compras y recibir tus pedidos en tiempo récord! ¡Somos tu
-          solución de entrega a domicilio en Venezuela!"
-        </p>
-        <div class="flex gap-5">
-          <Boton title="Descargar App" />
-          <Boton title="¡Pide Ya!" />
+    <section class="h-screen flex items-center">
+      <div
+        class="flex justify-between items-center bg-white px-16 rounded shadow-2xl"
+      >
+        <div class="w-[50%] flex flex-col gap-5">
+          <h2 class="text-4xl font-bold">Bulda e' Rapida</h2>
+          <p class="w-11/12">
+            "¡El rápido y confiable servicio de delivery que estabas esperando
+            ha llegado a Carabobo! Bulda e' Rapido es tu aliado para entregas
+            rápidas y seguras, al estilo de Amazon. ¡Descubre una nueva forma de
+            disfrutar de tus compras y recibir tus pedidos en tiempo récord!
+            ¡Somos tu solución de entrega a domicilio en Venezuela!"
+          </p>
+          <div class="flex gap-5">
+            <Boton title="Descargar App" />
+            <Boton title="¡Pide Ya!" />
+          </div>
         </div>
+        <img
+          width="311"
+          height="311"
+          class="w-[50%] bg-cover bg-no-repeat"
+          src="/moto.webp"
+          alt=""
+        />
       </div>
-      <img class="w-[50%]" src="/moto.webp" alt="" />
     </section>
   </main>
   <footer></footer>
@@ -33,5 +43,6 @@ import Header from "../components/HeaderPage.astro";
     font-family: "UbuntuCondensed";
     src: url("/fonts/UbuntuCondensed.ttf");
     font-weight: normal;
+    font-display: swap;
   }
 </style>
