@@ -1,14 +1,20 @@
 ---
 interface Props {
-  title?: string;
-  description?: string;
+  name?: string;
+  area?: string;
+  image?: string;
 }
-const { title = "Default Title", description = "Desc default" } = Astro.props;
+const {
+  name = "Default name",
+  area = "Desc default",
+  image = "#",
+} = Astro.props;
 ---
 
-<div class="bg-[#FFA851] rounded px-12 py-5 shadow-2xl">
-  <h3 class="text-xl font-bold">{title}</h3>
-  <p class="text-lg">
-    {description}
-  </p>
+<div class="bg-white rounded px-2 py-2 shadow-2xl flex gap-5">
+  <img width="100" height="100" class="rounded" src={image} alt={name + area} />
+  <div>
+    <h4 class="font-bold text-lg">{name}</h4>
+    <h5>{area}</h5>
+  </div>
 </div>
