@@ -2,6 +2,7 @@
 import Layout from "../Layouts/Layout.astro";
 import Boton from "../components/Boton.astro";
 import Header from "../components/HeaderPage.astro";
+import SimpleCard from "../components/SimpleCard.astro";
 ---
 
 <Layout>
@@ -34,8 +35,46 @@ import Header from "../components/HeaderPage.astro";
         />
       </div>
     </section>
+    <section>
+      <h2 class="text-center mb-12 text-4xl">About</h2>
+      <div class="flex gap-5">
+        <div class="flex flex-col gap-5 w-1/2">
+          <div class="bg-[#FFA851] rounded px-12 py-5 shadow-2xl">
+            <h3 class="text-xl font-bold">Mision</h3>
+            <p class="text-lg">
+              "Nuestra misión en Bulda e' Rapido es llevar la comodidad hasta la
+              puerta de tu casa. Somos la solución de delivery de pedidos y
+              mercancías más rápida y confiable en Venezuela, específicamente en
+              el estado Carabobo. Trabajamos arduamente para hacer tus compras
+              más fáciles, rápidas y seguras, brindándote un servicio impecable
+              que supera tus expectativas. ¡Confía en nosotros y disfruta de la
+              velocidad en cada entrega!"
+            </p>
+          </div>
+          <div class="bg-[#FFA851] rounded px-12 py-5 shadow-2xl">
+            <h3 class="text-xl font-bold">Vision</h3>
+            <p class="text-lg">
+              "¡Convierte tus deseos en realidad! En Bulda e' Rapido, estamos
+              aquí para llevarte todo lo que necesitas, directo a tu puerta en
+              tiempo récord. Nuestra visión es convertirnos en el aliado
+              confiable de entregas rápidas y eficientes, superando tus
+              expectativas a cada paso. ¡Descubre la nueva forma de comprar y
+              recibir, solo en Bulda e' Rapido, en Venezuela!"
+            </p>
+          </div>
+        </div>
+        <div class="w-1/2 bg-[#FFA851] rounded px-12 py-5 shadow-2xl">
+          <h3 class="text-xl font-bold">Algo ma</h3>
+          <p class="text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            quis non quas veniam reprehenderit provident recusandae nesciunt
+            inventore? Nesciunt, minus.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer></footer>
+  <footer class="">s</footer>
 </Layout>
 
 <style is:global>
