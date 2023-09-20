@@ -4,7 +4,7 @@ const s = Astro.url.pathname;
 
 <header
   id="landing-header"
-  class="py-3 px-10 items-center absolute top-0 w-full flex justify-between z-40"
+  class="py-3 px-10 items-center fixed top-0 w-full flex justify-between z-40 transition-all duration-300"
 >
   <div class="flex flex-grow basis-0">
     <a href="/" class="px-4 py-2 font-bold text-lg cursor-pointer">Bulda</a>
@@ -80,4 +80,15 @@ const s = Astro.url.pathname;
       menuBackDrop.style.visibility = "hidden";
     });
   });
+</script>
+<script>
+  const listItem = document.querySelector("#landing-header");
+  document.addEventListener("scroll",()=>{
+    let scroll = window.scrollY
+    if(scroll != 0){
+      listItem.classList.add("bg-[#ffa851]")
+    } else{
+      listItem.classList.remove("bg-[#ffa851]")
+    }
+  })
 </script>
