@@ -1,6 +1,7 @@
 ---
 import Layout from "../Layouts/Layout.astro";
 import Boton from "../components/Boton.astro";
+import Footer from "../components/Footer.astro";
 import Header from "../components/HeaderPage.astro";
 import SimpleCard from "../components/SimpleCard.astro";
 ---
@@ -35,7 +36,7 @@ import SimpleCard from "../components/SimpleCard.astro";
         />
       </div>
     </section>
-    <section>
+    <section class="h-screen pb-20">
       <h2 class="text-center mb-12 text-4xl">About</h2>
       <div class="flex gap-5">
         <div class="flex flex-col gap-5 w-1/2">
@@ -86,7 +87,7 @@ import SimpleCard from "../components/SimpleCard.astro";
       </div>
     </section>
   </main>
-  <footer class="">s</footer>
+  <Footer />
 </Layout>
 
 <style is:global>

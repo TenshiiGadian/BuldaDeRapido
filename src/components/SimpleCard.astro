@@ -11,8 +11,16 @@ const {
 } = Astro.props;
 ---
 
-<div class="bg-white rounded px-2 py-2 shadow-2xl flex gap-5">
-  <img width="100" height="100" class="rounded" src={image} alt={name + area} />
+<div
+  class="bg-white rounded border border-gray-300 shadow-lg flex items-center gap-5"
+>
+  <img
+    width="100"
+    height="100"
+    class="rounded-bl rounded-l object-cover"
+    src={image}
+    alt={name + area}
+  />
   <div>
     <h4 class="font-bold text-lg">{name}</h4>
     <h5>{area}</h5>
